@@ -2,8 +2,8 @@
 //  ARViewController.swift
 //  HDAugmentedRealityDemo
 //
-//  Created by Danijel Huis on 23/04/15.
-//  Copyright (c) 2015 Danijel Huis. All rights reserved.
+//  Software Engineer: Joe Ytuarte
+//  iOS Places of Interest Augmented Reality
 //
 
 import UIKit

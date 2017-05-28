@@ -24,6 +24,8 @@
 		8F74046F1DCDD5F5009A6F0B /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F7404651DCDD5F5009A6F0B /* hdar_close@3x.png */; };
 		8F7404801DCF31B0009A6F0B /* PlacesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F74047E1DCF31B0009A6F0B /* PlacesLoader.swift */; };
 		8F7404811DCF31B0009A6F0B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F74047F1DCF31B0009A6F0B /* Place.swift */; };
+		D61628081EDAF8C5003C9956 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61628071EDAF8C5003C9956 /* PlaceAnnotation.swift */; };
+		D616280A1EDAFF61003C9956 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61628091EDAFF61003C9956 /* AnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		8F7404651DCDD5F5009A6F0B /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
 		8F74047E1DCF31B0009A6F0B /* PlacesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesLoader.swift; sourceTree = "<group>"; };
 		8F74047F1DCF31B0009A6F0B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		D61628071EDAF8C5003C9956 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		D61628091EDAFF61003C9956 /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnnotationView.swift; path = ../AnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		8F7404451DCDD569009A6F0B /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				D61628091EDAFF61003C9956 /* AnnotationView.swift */,
 				8F7404461DCDD569009A6F0B /* AppDelegate.swift */,
 				8F7404481DCDD569009A6F0B /* ViewController.swift */,
 				8F74047E1DCF31B0009A6F0B /* PlacesLoader.swift */,
@@ -89,6 +94,7 @@
 				8F74044D1DCDD569009A6F0B /* Assets.xcassets */,
 				8F74044F1DCDD569009A6F0B /* LaunchScreen.storyboard */,
 				8F7404521DCDD569009A6F0B /* Info.plist */,
+				D61628071EDAF8C5003C9956 /* PlaceAnnotation.swift */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -161,7 +167,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Razeware LLC";
 				TargetAttributes = {
 					8F7404421DCDD569009A6F0B = {
@@ -212,7 +218,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F7404801DCF31B0009A6F0B /* PlacesLoader.swift in Sources */,
+				D616280A1EDAFF61003C9956 /* AnnotationView.swift in Sources */,
 				8F74046A1DCDD5F5009A6F0B /* ARViewController.swift in Sources */,
+				D61628081EDAF8C5003C9956 /* PlaceAnnotation.swift in Sources */,
 				8F7404491DCDD569009A6F0B /* ViewController.swift in Sources */,
 				8F7404661DCDD5F5009A6F0B /* ARAnnotation.swift in Sources */,
 				8F74046B1DCDD5F5009A6F0B /* DebugMapViewController.swift in Sources */,
@@ -264,6 +272,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -313,6 +322,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

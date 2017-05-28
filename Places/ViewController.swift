@@ -22,7 +22,6 @@
  */
 
 import UIKit
-
 import MapKit
 import CoreLocation
 
@@ -32,6 +31,7 @@ class ViewController: UIViewController {
   fileprivate let locationManager = CLLocationManager()
   fileprivate var startedLoadingPOIs = false
   fileprivate var places = [Place]()
+  fileprivate var arViewController: ARViewController!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -50,6 +50,16 @@ class ViewController: UIViewController {
   }
   
   @IBAction func showARController(_ sender: Any) {
+    arViewController = ARViewController()
+    //1
+    arViewController.dataSource = self
+    //2
+    arViewController.maxVisibleAnnotations = 30
+    arViewController.headingSmoothingFactor = 0.05
+    //3
+    arViewController.setAnnotations(places)
+    
+    self.present(arViewController, animated: true, completion: nil)
   }
   
 }
@@ -77,7 +87,29 @@ extension ViewController: CLLocationManagerDelegate {
           loader.loadPOIS(location: location, radius: 1000) { placesDict, error in
             //3
             if let dict = placesDict {
-              print(dict)
+              //print(dict)
+              //1
+              guard let placesArray = dict.object(forKey: "results") as? [NSDictionary]  else { return }
+              //2
+              for placeDict in placesArray {
+                //3
+                let latitude = placeDict.value(forKeyPath: "geometry.location.lat") as! CLLocationDegrees
+                let longitude = placeDict.value(forKeyPath: "geometry.location.lng") as! CLLocationDegrees
+                let reference = placeDict.object(forKey: "reference") as! String
+                let name = placeDict.object(forKey: "name") as! String
+                let address = placeDict.object(forKey: "vicinity") as! String
+                
+                let location = CLLocation(latitude: latitude, longitude: longitude)
+                //4
+                let place = Place(location: location, reference: reference, name: name, address: address)
+                self.places.append(place)
+                //5
+                let annotation = PlaceAnnotation(location: place.location!.coordinate, title: place.placeName)
+                //6
+                DispatchQueue.main.async {
+                  self.mapView.addAnnotation(annotation)
+                }
+              }
             }
           }
         }
@@ -85,4 +117,22 @@ extension ViewController: CLLocationManagerDelegate {
     }
   }
 }
+
+extension ViewController: ARDataSource {
+  func ar(_ arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView {
+    let annotationView = AnnotationView()
+    annotationView.annotation = viewForAnnotation
+    annotationView.delegate = self
+    annotationView.frame = CGRect(x: 0, y: 0, width: 150, height: 50)
+    
+    return annotationView
+  }
+}
+extension ViewController: AnnotationViewDelegate {
+  func didTouch(annotationView: AnnotationView) {
+    print("Tapped view for POI: \(annotationView.titleLabel?.text)")
+  }
+}
+
+
 

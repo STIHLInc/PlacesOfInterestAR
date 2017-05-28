@@ -2,8 +2,7 @@
 //  ARTrackingManager.swift
 //  HDAugmentedRealityDemo
 //
-//  Created by Danijel Huis on 22/04/15.
-//  Copyright (c) 2015 Danijel Huis. All rights reserved.
+//  Created by Joe Ytuarte on 5/28/17.
 //
 
 import UIKit
