@@ -40,6 +40,36 @@ class ViewController: UIViewController {
     locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
     locationManager.startUpdatingLocation()
     locationManager.requestWhenInUseAuthorization()
+    
+    // show artwork on map
+    let helpdesk = Helpdesk(title: "STIHL Inc. HelpDesk",
+                          locationName: "Helpdesk",
+                          discipline: "campus",
+                          coordinate: CLLocationCoordinate2D(latitude: 37.7924281, longitude: -122.412798))
+
+    mapView.addAnnotation(helpdesk)
+    
+    let guidebar = Store(title: "STIHL Inc. Guidebar",
+                            locationName: "Guidebar",
+                            discipline: "campus",
+                            coordinate: CLLocationCoordinate2D(latitude: 37.7907006, longitude: -122.4077918))
+
+    mapView.addAnnotation(guidebar)
+    
+    let museum = Museum(title: "STIHL Inc. Museum",
+                            locationName: "Museum",
+                            discipline: "campus",
+                            coordinate: CLLocationCoordinate2D(latitude: 37.7884096, longitude: -122.4081711))
+
+    mapView.addAnnotation(museum)
+    
+    let hr = HumanResources(title: "STIHL Inc. Museum",
+                        locationName: "Museum",
+                        discipline: "campus",
+                        coordinate: CLLocationCoordinate2D(latitude: 37.7821096, longitude: -122.4038216))
+    
+    mapView.addAnnotation(hr)
+    
   }
   
   
@@ -60,6 +90,7 @@ class ViewController: UIViewController {
     arViewController.setAnnotations(places)
     
     self.present(arViewController, animated: true, completion: nil)
+    
   }
   
 }
@@ -79,6 +110,7 @@ extension ViewController: CLLocationManagerDelegate {
         let region = MKCoordinateRegion(center: location.coordinate, span: span)
         mapView.region = region
         // More code later...
+        
         //1
         if !startedLoadingPOIs {
           startedLoadingPOIs = true

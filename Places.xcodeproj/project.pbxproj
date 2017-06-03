@@ -25,6 +25,10 @@
 		8F7404801DCF31B0009A6F0B /* PlacesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F74047E1DCF31B0009A6F0B /* PlacesLoader.swift */; };
 		8F7404811DCF31B0009A6F0B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F74047F1DCF31B0009A6F0B /* Place.swift */; };
 		D61114D01EDB0D3800E2EFFB /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61114CF1EDB0D3800E2EFFB /* AnnotationView.swift */; };
+		D61114D21EE0859400E2EFFB /* HelpDesk.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61114D11EE0859400E2EFFB /* HelpDesk.swift */; };
+		D61114E01EE309F100E2EFFB /* HumanResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61114DF1EE309F100E2EFFB /* HumanResources.swift */; };
+		D61114E41EE30A8000E2EFFB /* Museum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61114E31EE30A8000E2EFFB /* Museum.swift */; };
+		D61114E61EE30ADA00E2EFFB /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61114E51EE30ADA00E2EFFB /* Store.swift */; };
 		D61628081EDAF8C5003C9956 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61628071EDAF8C5003C9956 /* PlaceAnnotation.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +53,10 @@
 		8F74047E1DCF31B0009A6F0B /* PlacesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesLoader.swift; sourceTree = "<group>"; };
 		8F74047F1DCF31B0009A6F0B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		D61114CF1EDB0D3800E2EFFB /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		D61114D11EE0859400E2EFFB /* HelpDesk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpDesk.swift; path = ../HelpDesk.swift; sourceTree = "<group>"; };
+		D61114DF1EE309F100E2EFFB /* HumanResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumanResources.swift; sourceTree = "<group>"; };
+		D61114E31EE30A8000E2EFFB /* Museum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Museum.swift; path = ../Museum.swift; sourceTree = "<group>"; };
+		D61114E51EE30ADA00E2EFFB /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		D61628071EDAF8C5003C9956 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +92,8 @@
 		8F7404451DCDD569009A6F0B /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				D61114E31EE30A8000E2EFFB /* Museum.swift */,
+				D61114D11EE0859400E2EFFB /* HelpDesk.swift */,
 				D61114CF1EDB0D3800E2EFFB /* AnnotationView.swift */,
 				8F7404461DCDD569009A6F0B /* AppDelegate.swift */,
 				8F7404481DCDD569009A6F0B /* ViewController.swift */,
@@ -95,6 +105,8 @@
 				8F74044F1DCDD569009A6F0B /* LaunchScreen.storyboard */,
 				8F7404521DCDD569009A6F0B /* Info.plist */,
 				D61628071EDAF8C5003C9956 /* PlaceAnnotation.swift */,
+				D61114DF1EE309F100E2EFFB /* HumanResources.swift */,
+				D61114E51EE30ADA00E2EFFB /* Store.swift */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -219,16 +231,20 @@
 			files = (
 				8F7404801DCF31B0009A6F0B /* PlacesLoader.swift in Sources */,
 				8F74046A1DCDD5F5009A6F0B /* ARViewController.swift in Sources */,
+				D61114E41EE30A8000E2EFFB /* Museum.swift in Sources */,
+				D61114E61EE30ADA00E2EFFB /* Store.swift in Sources */,
 				D61628081EDAF8C5003C9956 /* PlaceAnnotation.swift in Sources */,
 				8F7404491DCDD569009A6F0B /* ViewController.swift in Sources */,
 				8F7404661DCDD5F5009A6F0B /* ARAnnotation.swift in Sources */,
 				D61114D01EDB0D3800E2EFFB /* AnnotationView.swift in Sources */,
+				D61114D21EE0859400E2EFFB /* HelpDesk.swift in Sources */,
 				8F74046B1DCDD5F5009A6F0B /* DebugMapViewController.swift in Sources */,
 				8F7404671DCDD5F5009A6F0B /* ARAnnotationView.swift in Sources */,
 				8F7404691DCDD5F5009A6F0B /* ARTrackingManager.swift in Sources */,
 				8F7404681DCDD5F5009A6F0B /* ARConfiguration.swift in Sources */,
 				8F7404471DCDD569009A6F0B /* AppDelegate.swift in Sources */,
 				8F7404811DCF31B0009A6F0B /* Place.swift in Sources */,
+				D61114E01EE309F100E2EFFB /* HumanResources.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
