@@ -45,28 +45,28 @@ class ViewController: UIViewController {
     let helpdesk = Helpdesk(title: "STIHL Inc. HelpDesk",
                           locationName: "Helpdesk",
                           discipline: "campus",
-                          coordinate: CLLocationCoordinate2D(latitude: 37.7924281, longitude: -122.412798))
+                          coordinate: CLLocationCoordinate2D(latitude: 36.821126, longitude: -76.064324))
 
     mapView.addAnnotation(helpdesk)
     
-    let guidebar = Store(title: "STIHL Inc. Guidebar",
-                            locationName: "Guidebar",
+    let store = Store(title: "STIHL Inc. Store",
+                            locationName: "Store",
                             discipline: "campus",
-                            coordinate: CLLocationCoordinate2D(latitude: 37.7907006, longitude: -122.4077918))
+                            coordinate: CLLocationCoordinate2D(latitude: 36.816296, longitude: -76.062158))
 
-    mapView.addAnnotation(guidebar)
+    mapView.addAnnotation(store)
     
     let museum = Museum(title: "STIHL Inc. Museum",
                             locationName: "Museum",
                             discipline: "campus",
-                            coordinate: CLLocationCoordinate2D(latitude: 37.7884096, longitude: -122.4081711))
+                            coordinate: CLLocationCoordinate2D(latitude: 36.820350, longitude: -76.064856))
 
     mapView.addAnnotation(museum)
     
-    let hr = HumanResources(title: "STIHL Inc. Museum",
-                        locationName: "Museum",
+    let hr = HumanResources(title: "STIHL Inc. HR Dept.",
+                        locationName: "HumanRecources",
                         discipline: "campus",
-                        coordinate: CLLocationCoordinate2D(latitude: 37.7821096, longitude: -122.4038216))
+                        coordinate: CLLocationCoordinate2D(latitude: 36.817820, longitude: -76.062304))
     
     mapView.addAnnotation(hr)
     
